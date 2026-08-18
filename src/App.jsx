@@ -5,11 +5,13 @@ import Product from "./pages/Product";
 import MainNav from "./components/mainNav";
 import RootLayout from "./layouts/RootLayout";
 import ProductDetail from "./pages/ProductDetail";
+import PageNotFound from "./pages/PageNotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <PageNotFound/>,
     children: [
       { path: "/", element: <Home /> },
       { path: "product", element: <Product /> },

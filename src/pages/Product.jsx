@@ -1,11 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Product = () => {
+  const navigate = useNavigate();
+
+  const goToOne = () => {
+    navigate("1");
+  };
   return (
     <div>
       <h1>Product</h1>
-      <p>Go To <Link to={'/'}> Home </Link></p>
+
+      <p onClick={goToOne}>Asus</p>
+      <p>
+        <Link to={"2"}>MSI</Link>
+      </p>
+      <p>
+        <Link to={"3"}>enovo</Link>
+      </p>
     </div>
   );
 };
